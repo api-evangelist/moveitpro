@@ -1,0 +1,106 @@
+aid: moveitpro
+url: https://raw.githubusercontent.com/api-evangelist/moveitpro/refs/heads/main/apis.yml
+name: MoveitPro
+kind: company
+description: MoveitPro (MoveitPro+) is web-based moving company management software
+  built by professional movers, covering the full operation of a moving and storage
+  company - CRM and lead capture, estimating and quoting, a smart dispatch board with
+  drag-and-drop scheduling and crew assignment, fleet and maintenance management,
+  digital bills of lading and e-signatures, itemized inventory, storage and warehouse
+  tracking, invoicing and credit-card payments, commission tracking, and AI call
+  transcription and QA. MoveitPro advertises "Open API & Custom Integrations" and
+  ships native integrations (QuickBooks, Twilio, Mailchimp, Google Maps/Calendar),
+  but does not publish a self-serve public developer API, reference documentation,
+  or OpenAPI. Its only publicly documented programmatic surface is a Zapier
+  integration exposing Clients, Leads, Jobs, and Estimates. The APIs listed below
+  are logical resources modeled from that documented Zapier integration; MoveitPro
+  does not publish HTTP endpoints, base URLs, or authentication details.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Moving Software
+- Moving Company
+- Logistics
+- Field Service
+- Dispatch
+- CRM
+- Vertical SaaS
+created: '2026-07-04'
+modified: '2026-07-04'
+specificationVersion: '0.19'
+apis:
+- aid: moveitpro:moveitpro-clients-api
+  name: MoveitPro Clients API
+  tags:
+  - Clients
+  - Customers
+  - CRM
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://zapier.com/apps/moveitpro/integrations
+  properties:
+  - url: https://zapier.com/apps/moveitpro/integrations
+    type: Documentation
+  description: Client (customer) records. Modeled from the documented MoveitPro
+    Zapier integration, which exposes a "New Client" trigger and a "Create Client"
+    action with name, contact, referral source, and branch assignment fields.
+    MoveitPro does not publish a public HTTP endpoint, base URL, or auth scheme for
+    this resource; endpoints are modeled, not sourced from official API reference.
+- aid: moveitpro:moveitpro-leads-api
+  name: MoveitPro Leads API
+  tags:
+  - Leads
+  - Sales
+  - CRM
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://zapier.com/apps/moveitpro/integrations
+  properties:
+  - url: https://zapier.com/apps/moveitpro/integrations
+    type: Documentation
+  description: Sales leads captured from websites, lead providers, and Zillow.
+    Modeled from the documented MoveitPro Zapier integration, which exposes a "New
+    Lead" trigger and a "Create Lead" action with contact info, move date,
+    origin/destination addresses, floor counts, referral source, and branch ID.
+    No public HTTP endpoint or base URL is documented; endpoints are modeled.
+- aid: moveitpro:moveitpro-jobs-api
+  name: MoveitPro Jobs API
+  tags:
+  - Jobs
+  - Moves
+  - Dispatch
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://zapier.com/apps/moveitpro/integrations
+  properties:
+  - url: https://zapier.com/apps/moveitpro/integrations
+    type: Documentation
+  description: Moving jobs and their lifecycle. Modeled from the documented MoveitPro
+    Zapier integration, which exposes a "Job Closed Out" trigger. No public HTTP
+    endpoint, base URL, or auth scheme is documented for creating, reading, or
+    scheduling jobs; endpoints are modeled, not sourced from an official reference.
+- aid: moveitpro:moveitpro-estimates-api
+  name: MoveitPro Estimates API
+  tags:
+  - Estimates
+  - Quotes
+  - Pricing
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://zapier.com/apps/moveitpro/integrations
+  properties:
+  - url: https://zapier.com/apps/moveitpro/integrations
+    type: Documentation
+  description: Move estimates and quotes. Modeled from the documented MoveitPro
+    Zapier integration, which exposes a "Saved Estimate" trigger. Invoices are
+    created downstream from estimates inside the product, but no public
+    invoice/estimate HTTP endpoint or base URL is documented; endpoints are modeled.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/moveitpro
+- type: Website
+  url: https://www.moveitpro.com/
+- type: Documentation
+  url: https://www.moveitpro.com/features-list
+- type: Integrations
+  url: https://zapier.com/apps/moveitpro/integrations
+- type: Plans
+  url: https://www.moveitpro.com/pricing
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

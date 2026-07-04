@@ -1,0 +1,98 @@
+aid: moveitpro
+name: MoveitPro
+review:
+  question: Does MoveitPro expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-04'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. MoveitPro publishes no public API of any
+    kind - no REST reference, no OpenAPI, no base URL, and certainly no
+    server-push transport (WebSocket or SSE) to model. The only documented,
+    externally observable programmatic surface is a Zapier integration, whose
+    real-time behavior is delivered by Zapier polling triggers, not by a
+    MoveitPro-hosted WebSocket. There is nothing on MoveitPro's own side to
+    describe with an AsyncAPI document.
+findings:
+  summary: |
+    MoveitPro (MoveitPro+) does not publish a documented public developer API.
+    It is web-based moving company management software (CRM, estimating,
+    dispatch/scheduling, fleet, storage, invoicing, AI call QA). No developer
+    portal, api.moveitpro.com host, API reference, OpenAPI/Swagger, or
+    authentication documentation could be found. The MoveitPro marketing/pricing
+    page lists "Open API & Custom Integrations" as a differentiating feature, but
+    this is not self-serve or publicly documented - it points prospects to a
+    demo/sales conversation. The only publicly documented programmatic surface is
+    a Zapier integration exposing four polling triggers (Job Closed Out, New
+    Client, New Lead, Saved Estimate) and two write actions (Create Client, Create
+    Lead). MoveitPro also ships native product integrations (QuickBooks, Twilio,
+    Mailchimp, Google Maps, Google Calendar). No public WebSocket (ws:// or
+    wss://) endpoint is documented anywhere.
+  accessModel: |
+    Closed / demo-gated. MoveitPro is a paid SaaS product sold per user per month
+    with usage-based token add-ons for AI features. Any "Open API & Custom
+    Integrations" capability is arranged through MoveitPro's sales/onboarding
+    process, not published for self-serve developer signup. External automation is
+    generally done through the Zapier integration.
+  publicApi: false
+  endpointsModeled: true
+  endpointsConfirmedRest: none
+  logicalResources:
+    - name: Clients
+      source: Zapier "New Client" trigger and "Create Client" action
+    - name: Leads
+      source: Zapier "New Lead" trigger and "Create Lead" action
+    - name: Jobs
+      source: Zapier "Job Closed Out" trigger
+    - name: Estimates
+      source: Zapier "Saved Estimate" trigger
+  transports:
+    - protocol: REST
+      documented: false
+      note: No public REST reference, base URL, or OpenAPI is published by MoveitPro.
+    - protocol: Zapier
+      documented: true
+      note: Documented integration with 4 polling triggers and 2 create actions; the only public programmatic surface.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint documented anywhere as of the review date.
+  nativeIntegrations:
+    - QuickBooks
+    - Twilio
+    - Mailchimp
+    - Google Maps
+    - Google Calendar
+  pricing: |
+    Platform subscription is per user, per month; MoveitPro does not itemize tier
+    prices on its own pricing page (demo-gated, "Book a pricing walkthrough").
+    Third-party listings report figures ranging from ~$99-$150/mo entry pricing up
+    to ~$199/mo for a small-team standard plan, scaling with user count. AI calling
+    and texting are billed via consumption-based tokens. Because MoveitPro does not
+    publish an itemized, structured plan list, no plans/ file was fabricated; the
+    Plans common property links to the live pricing page.
+sources:
+  - url: https://www.moveitpro.com/
+    type: Website
+    note: MoveitPro+ marketing home; moving company management software.
+  - url: https://www.moveitpro.com/features-list
+    type: Documentation
+    note: Feature list (dispatch, CRM, financial, AI); no API/webhook/developer docs shown.
+  - url: https://www.moveitpro.com/pricing
+    type: Plans
+    note: Per-user monthly + token add-ons; demo-gated. Competitor table lists "Open API & Custom Integrations" but no docs.
+  - url: https://zapier.com/apps/moveitpro/integrations
+    type: Integrations
+    note: Only public programmatic surface - triggers (Job Closed Out, New Client, New Lead, Saved Estimate) and actions (Create Client, Create Lead).
+actions:
+  asyncapiPath: null
+  openapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    MoveitPro exposes no documented public API and no WebSocket surface. No
+    OpenAPI or AsyncAPI was authored because there are no documented endpoints,
+    base URLs, or auth to describe. The apis.yml entry lists four logical
+    resources (Clients, Leads, Jobs, Estimates) modeled honestly from the
+    documented Zapier integration, with endpointsModeled flagged and no
+    plans/rate-limits/finops/openapi/collections files fabricated.
