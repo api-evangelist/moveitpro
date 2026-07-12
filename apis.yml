@@ -91,6 +91,8 @@ apis:
     created downstream from estimates inside the product, but no public
     invoice/estimate HTTP endpoint or base URL is documented; endpoints are modeled.
 common:
+- type: DomainSecurity
+  url: security/moveitpro-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/moveitpro
 - type: Website
@@ -101,6 +103,8 @@ common:
   url: https://zapier.com/apps/moveitpro/integrations
 - type: Plans
   url: https://www.moveitpro.com/pricing
+- url: https://www.moveitpro.com/blog
+  type: Blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
