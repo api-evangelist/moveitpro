@@ -74,6 +74,10 @@ apis:
 - aid: moveitpro:moveitpro-jobs-api
   name: MoveitPro Jobs API
   tags:
+  - Job
+  - Moves
+  - Dispatch
+  tags_raw:
   - Jobs
   - Moves
   - Dispatch
