@@ -1,0 +1,141 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/moveitpro/integrations
+checked:
+- https://composio.dev/toolkits/moveitpro
+- https://monid.ai/tools/moveitpro
+- https://n8n.io/integrations/moveitpro/
+- https://zapier.com/apps/moveitpro/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: moveitpro
+  url: https://zapier.com/apps/moveitpro/integrations
+  external_url: https://www.moveitpro.com/
+  partner_tier: BRONZE
+  triggers:
+  - key: job_closed_out
+    label: 'Job Closed Out '
+  - key: new_client
+    label: New Client
+  - key: new_lead
+    label: New Lead
+  - key: saved_estimate
+    label: Saved Estimate
+  actions:
+  - key: create_client
+    label: Create Client
+  - key: create_lead
+    label: Create Lead
+  searches: []
+edges:
+- partner_name: LeadConnector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/moveitpro/integrations/leadconnector
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.leadconnectorhq.com/
+- partner_name: Gravity Forms
+  partner: gravity-forms
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/moveitpro/integrations/gravity-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.gravityforms.com/?utm_campaign=partners&utm_source=zapier-listing-learn-more&utm_medium=free-placement
+- partner_name: Yelp Leads
+  partner: yelp
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/moveitpro/integrations/yelp-leads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://business.yelp.com/brands/leads-api/
+- partner_name: Mailchimp
+  partner: mailchimp
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/moveitpro/integrations/mailchimp
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://mailchimp.com/
+- partner_name: Webflow
+  partner: webflow
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/moveitpro/integrations/webflow
+  direction: third-party
+  category: Website Builders
+  partner_url: https://webflow.com/
+- partner_name: Yelp Conversions
+  partner: yelp
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/moveitpro/integrations/yelp-conversions
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://yelp.com/
+templates:
+- title: Send Gmail emails for new MoveitPro leads
+  url: https://zapier.com/apps/gmail/integrations/moveitpro/255668766/send-gmail-emails-for-new-moveitpro-leads
+  apps:
+  - moveitpro
+  - gmail
+- title: Send Slack messages for new MoveitPro leads
+  url: https://zapier.com/apps/moveitpro/integrations/slack/255668767/send-slack-messages-for-new-moveitpro-leads
+  apps:
+  - moveitpro
+  - slack
+- title: Create MoveItPro leads from new Google Sheets rows
+  url: https://zapier.com/apps/google-sheets/integrations/moveitpro/255668776/create-moveitpro-leads-from-new-google-sheets-rows
+  apps:
+  - google-sheets
+  - moveitpro
+- title: Send Gmail notifications for new MoveitPro clients
+  url: https://zapier.com/apps/gmail/integrations/moveitpro/255670292/send-gmail-notifications-for-new-moveitpro-clients
+  apps:
+  - moveitpro
+  - gmail
+- title: Create Google Calendar events from new Moveitpro leads
+  url: https://zapier.com/apps/google-calendar/integrations/moveitpro/255670294/create-google-calendar-events-from-new-moveitpro-leads
+  apps:
+  - moveitpro
+  - google-calendar
+- title: Create MoveitPro clients from new Google Sheets rows
+  url: https://zapier.com/apps/google-sheets/integrations/moveitpro/255670301/create-moveitpro-clients-from-new-google-sheets-rows
+  apps:
+  - google-sheets
+  - moveitpro
+- title: Create leads in MoveitPro when pipeline stages change in LeadConnector
+  url: https://zapier.com/apps/leadconnector/integrations/moveitpro/255693030/create-leads-in-moveitpro-when-pipeline-stages-change-in-leadconnector
+  apps:
+  - leadconnector
+  - moveitpro
+- title: Create spreadsheet rows in Google Sheets for new saved estimates in MoveitPro
+  url: https://zapier.com/apps/google-sheets/integrations/moveitpro/255718286/create-spreadsheet-rows-in-google-sheets-for-new-saved-estimates-in-moveitpro
+  apps:
+  - moveitpro
+  - google-sheets
+template_total: 8
