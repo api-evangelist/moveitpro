@@ -1,4 +1,4 @@
-generated: '2026-10-12'
+generated: '2026-10-20'
 method: searched
 source:
 - https://zapier.com/apps/moveitpro/integrations
@@ -32,72 +32,6 @@ marketplace_apps:
     label: Create Lead
   searches: []
 edges:
-- partner_name: LeadConnector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/moveitpro/integrations/leadconnector
-  direction: third-party
-  category: Marketing Automation
-  partner_url: https://www.leadconnectorhq.com/
-- partner_name: Gravity Forms
-  partner: gravity-forms
-  partner_match: domain
-  partner_candidate: null
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/moveitpro/integrations/gravity-forms
-  direction: third-party
-  category: Forms & Surveys
-  partner_url: https://www.gravityforms.com/?utm_campaign=partners&utm_source=zapier-listing-learn-more&utm_medium=free-placement
-- partner_name: Yelp Leads
-  partner: yelp
-  partner_match: domain
-  partner_candidate: null
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/moveitpro/integrations/yelp-leads
-  direction: third-party
-  category: Ads & Conversion
-  partner_url: https://business.yelp.com/brands/leads-api/
-- partner_name: Mailchimp
-  partner: mailchimp
-  partner_match: name-exact
-  partner_candidate: null
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/moveitpro/integrations/mailchimp
-  direction: third-party
-  category: Marketing Automation
-  partner_url: https://mailchimp.com/
-- partner_name: Webflow
-  partner: webflow
-  partner_match: name-exact
-  partner_candidate: null
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/moveitpro/integrations/webflow
-  direction: third-party
-  category: Website Builders
-  partner_url: https://webflow.com/
-- partner_name: Yelp Conversions
-  partner: yelp
-  partner_match: domain
-  partner_candidate: null
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/moveitpro/integrations/yelp-conversions
-  direction: third-party
-  category: Ads & Conversion
-  partner_url: https://yelp.com/
 - partner_name: Zapier
   partner: zapier
   partner_match: aggregator
@@ -123,6 +57,90 @@ edges:
     builder: unknown (not in the directory record)
   detected_by: sweep-workflow-automation.py
   first_seen: '2026-10-15'
+- partner_name: LeadConnector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  relationship: ipaas-bridge
+  evidence: https://zapier.com/apps/moveitpro/integrations/leadconnector
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.leadconnectorhq.com/
+- partner_name: Gravity Forms
+  partner: gravity-forms
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  relationship: ipaas-bridge
+  evidence: https://zapier.com/apps/moveitpro/integrations/gravity-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.gravityforms.com/?utm_campaign=partners&utm_source=zapier-listing-learn-more&utm_medium=free-placement
+- partner_name: Yelp Leads
+  partner: yelp
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  relationship: ipaas-bridge
+  evidence: https://zapier.com/apps/moveitpro/integrations/yelp-leads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://business.yelp.com/brands/leads-api/
+- partner_name: Mailchimp
+  partner: mailchimp
+  partner_match: domain+name-among-holders
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  relationship: ipaas-bridge
+  evidence: https://zapier.com/apps/moveitpro/integrations/mailchimp
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://mailchimp.com/
+- partner_name: Webflow
+  partner: webflow
+  partner_match: domain+name-among-holders
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  relationship: ipaas-bridge
+  evidence: https://zapier.com/apps/moveitpro/integrations/webflow
+  direction: third-party
+  category: Website Builders
+  partner_url: https://webflow.com/
+- partner_name: Microsoft Excel
+  partner: null
+  partner_match: null
+  partner_candidate: zapier
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  relationship: ipaas-bridge
+  evidence: https://zapier.com/apps/moveitpro/integrations/excel
+  direction: third-party
+  category: Microsoft
+  partner_url: https://zapier.com/office.com
+- partner_name: Yelp Conversions
+  partner: yelp
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  relationship: ipaas-bridge
+  evidence: https://zapier.com/apps/moveitpro/integrations/yelp-conversions
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://yelp.com/
 templates:
 - title: Send Gmail emails for new MoveitPro leads
   url: https://zapier.com/apps/gmail/integrations/moveitpro/255668766/send-gmail-emails-for-new-moveitpro-leads
