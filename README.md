@@ -1,4 +1,4 @@
-# MoveitPro (moveitpro)
+# MoveitPro
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,74 +64,88 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-MoveitPro (MoveitPro+) is web-based moving company management software built by professional movers, covering the full operation of a moving and storage company - CRM and lead capture, estimating and quoting, a smart dispatch board with drag-and-drop scheduling and crew assignment, fleet and maintenance management, digital bills of lading and e-signatures, itemized inventory, storage and warehouse tracking, invoicing and credit-card payments, commission tracking, and AI call transcription and QA.
+MoveitPro (MoveitPro+) is web-based moving company management software built by professional movers, covering the full operation of a moving and storage company - CRM and lead capture, estimating and quoting, a smart dispatch board with drag-and-drop scheduling and crew assignment, fleet and maintenance management, digital bills of lading and e-signatures, itemized inventory, storage and warehouse tracking, invoicing and credit-card payments, commission tracking, and AI call transcription and QA. MoveitPro advertises "Open API & Custom Integrations" and ships native integrations (QuickBooks, Twilio, Mailchimp, Google Maps/Calendar), but does not publish a self-serve public developer API, reference documentation, or OpenAPI. Its only publicly documented programmatic surface is a Zapier integration exposing Clients, Leads, Jobs, and Estimates. The APIs listed below are logical resources modeled from that documented Zapier integration; MoveitPro does not publish HTTP endpoints, base URLs, or authentication details.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/moveitpro/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/moveitpro/refs/heads/main/apis.yml)
+**Areas:** Moving Software · Moving Company · Logistics · Field Service · Dispatch · CRM · Vertical SaaS
 
-## Access Model (Honest Assessment)
+## MoveitPro on APIs.io
 
-MoveitPro does **not** publish a documented public developer API. There is no developer portal, no `api.moveitpro.com` host, no API reference, no OpenAPI/Swagger, and no public authentication documentation.
+Everything profiled for MoveitPro is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/moveitpro/](https://apis.io/providers/moveitpro/)** — or go straight to one of the APIs or properties below.
 
-- MoveitPro's own pricing/comparison page advertises **"Open API & Custom Integrations"** as a differentiating feature, but this is **not self-serve or publicly documented** - it points prospects to a demo/sales conversation.
-- The **only publicly documented programmatic surface** is a **Zapier integration**, which exposes four polling triggers - *Job Closed Out*, *New Client*, *New Lead*, *Saved Estimate* - and two write actions - *Create Client*, *Create Lead*.
-- MoveitPro also ships native product integrations: **QuickBooks, Twilio, Mailchimp, Google Maps, Google Calendar**.
+### APIs (4)
 
-The APIs listed in `apis.yml` are **logical resources modeled from the documented Zapier integration**. MoveitPro publishes no HTTP endpoints, base URLs, or auth details, so no OpenAPI, Postman collection, plans, rate-limits, or FinOps artifacts were fabricated. See `review.yml` for the full assessment.
+- [MoveitPro Clients API](https://apis.io/apis/moveitpro/moveitpro-clients-api/) — Client (customer) records. Modeled from the documented MoveitPro Zapier integration, which exposes a "New Client" trigger and a "Create Client" action with…
+- [MoveitPro Leads API](https://apis.io/apis/moveitpro/moveitpro-leads-api/) — Sales leads captured from websites, lead providers, and Zillow. Modeled from the documented MoveitPro Zapier integration, which exposes a "New Lead" trigger…
+- [MoveitPro Jobs API](https://apis.io/apis/moveitpro/moveitpro-jobs-api/) — Moving jobs and their lifecycle. Modeled from the documented MoveitPro Zapier integration, which exposes a "Job Closed Out" trigger. No public HTTP…
+- [MoveitPro Estimates API](https://apis.io/apis/moveitpro/moveitpro-estimates-api/) — Move estimates and quotes. Modeled from the documented MoveitPro Zapier integration, which exposes a "Saved Estimate" trigger. Invoices are created…
 
-## Tags
+### Published properties
 
-- Moving Software
-- Moving Company
-- Logistics
-- Field Service
-- Dispatch
-- CRM
-- Vertical SaaS
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (1)
 
-- **Created:** 2026-07-04
-- **Modified:** 2026-07-04
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs (Modeled - not officially documented)
+- [Moveitpro Domain Security](https://apis.io/security/moveitpro/moveitpro-domain-security/)
 
-### MoveitPro Clients API
+## Where to find this API
 
-Client (customer) records. Modeled from the Zapier *New Client* trigger and *Create Client* action (name, contact, referral source, branch assignment).
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- **Documentation:** [https://zapier.com/apps/moveitpro/integrations](https://zapier.com/apps/moveitpro/integrations)
-
-### MoveitPro Leads API
-
-Sales leads captured from websites, lead providers, and Zillow. Modeled from the Zapier *New Lead* trigger and *Create Lead* action (contact, move date, origin/destination, floor counts, referral source, branch ID).
-
-- **Documentation:** [https://zapier.com/apps/moveitpro/integrations](https://zapier.com/apps/moveitpro/integrations)
-
-### MoveitPro Jobs API
-
-Moving jobs and their lifecycle. Modeled from the Zapier *Job Closed Out* trigger.
-
-- **Documentation:** [https://zapier.com/apps/moveitpro/integrations](https://zapier.com/apps/moveitpro/integrations)
-
-### MoveitPro Estimates API
-
-Move estimates and quotes. Modeled from the Zapier *Saved Estimate* trigger; invoices are generated downstream from estimates inside the product.
-
-- **Documentation:** [https://zapier.com/apps/moveitpro/integrations](https://zapier.com/apps/moveitpro/integrations)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/moveitpro)
 - [Website](https://www.moveitpro.com/)
 - [Documentation](https://www.moveitpro.com/features-list)
-- [Integrations](https://zapier.com/apps/moveitpro/integrations)
-- [Plans](https://www.moveitpro.com/pricing)
+- [Blog](https://www.moveitpro.com/blog)
 
-## Pricing
+## API Evangelist rating
 
-Platform subscription is per user, per month (MoveitPro does not itemize tier prices on its own demo-gated pricing page; third-party listings report roughly $99-$199/mo entry-to-small-team ranges scaling with user count). AI calling/texting features are billed via consumption-based tokens.
+**Kin Score 5.4** — minimal · rubric 0.24.0 · scored 2026-10-17
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 0.0 |
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/moveitpro/](https://apis.io/providers/moveitpro/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for MoveitPro: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/moveitpro/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
